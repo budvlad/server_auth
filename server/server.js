@@ -7,7 +7,9 @@ const cookieParser = require("cookie-parser");
 const app = express();
 
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://127.0.0.1:27017/auth", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/auth", {
+  useNewUrlParser: true
+});
 
 const { User } = require("./models/user");
 const { auth } = require("./middleware/auth");
