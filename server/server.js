@@ -5,9 +5,11 @@ const bcrypt = require("bcrypt");
 const cookieParser = require("cookie-parser");
 
 const app = express();
+const mLab =
+  "mongodb://<grasputin>:<qwedcxza2S>@ds213229.mlab.com:13229/db_myproj";
 
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/auth", {
+mongoose.connect(mLab || "mongodb://127.0.0.1:27017/auth", {
   useNewUrlParser: true
 });
 
