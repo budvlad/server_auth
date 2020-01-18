@@ -6,7 +6,7 @@ const cookieParser = require("cookie-parser");
 
 const app = express();
 const mLab =
-  "mongodb://<grasputin>:<qwedcxza2S>@ds213229.mlab.com:13229/db_myproj";
+  "mongodb://<grasputin>:<qwedcxza2S>@ds013004.mlab.com:13004/auth_db";
 
 mongoose.Promise = global.Promise;
 mongoose.connect(mLab || "mongodb://127.0.0.1:27017/auth", {
