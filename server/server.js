@@ -49,7 +49,7 @@ app.post("/api/user/login", (req, res) => {
 app.get("/user/profile", auth, (req, res) => {
   res.status(200).send(req.token);
 });
-app.get("/", auth, (req, res) => {
+app.get("/", (req, res) => {
   res.status(200).send("Hi, into heroku!");
 });
 
